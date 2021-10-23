@@ -1,0 +1,203 @@
+#easy {
+    z-index: 1;
+    font-family: 'Titan One', cursive;
+    position: relative;
+    font-size: inherit;
+    border-radius: 1em;
+    letter-spacing: 0.15em;
+    color: #00A05D;
+    padding: 0.75em 1.5em;
+    border: none;
+    background-color: #e7e7e7;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+#easy::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.75em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #00A05D;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+}
+
+#easy:hover {
+    cursor: pointer;
+    color: #F2F2F2;
+}
+
+#easy:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+#medium {
+    z-index: 1;
+    font-family: 'Titan One', cursive;
+    position: relative;
+    font-size: inherit;
+    border-radius: 1em;
+    letter-spacing: 0.15em;
+    color: #FCA814;
+    padding: 0.75em 1.5em;
+    border: none;
+    background-color: #e7e7e7;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+#medium::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.75em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #FCA814;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+}
+
+#medium:hover {
+    cursor: pointer;
+    color: #F2F2F2;
+}
+
+#medium:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+#hard {
+    z-index: 1;
+    font-family: 'Titan One', cursive;
+    position: relative;
+    font-size: inherit;
+    border-radius: 1em;
+    letter-spacing: 0.15em;
+    color: #DA3A30;
+    padding: 0.75em 1.5em;
+    border: none;
+    background-color: #e7e7e7;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+#hard::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.75em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #DA3A30;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+}
+
+#hard:hover {
+    cursor: pointer;
+    color: #F2F2F2;
+}
+
+#hard:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+#multiplayer {
+    z-index: 1;
+    font-family: 'Titan One', cursive;
+    position: relative;
+    font-size: inherit;
+    border-radius: 1em;
+    letter-spacing: 0.15em;
+    color: #5822d6;
+    padding: 0.75em 1.5em;
+    border: none;
+    background-color: #e7e7e7;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+#multiplayer::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.75em;
+    height: 1em;
+    border-radius: 50%;
+    /* background-color: #DA3A30; */
+    animation: gradient 2.5s infinite 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) forwards;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+}
+
+#multiplayer:hover {
+    cursor: pointer;
+    color: #F2F2F2;
+}
+
+#multiplayer:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+
+@keyframes gradient {
+    0% {
+        background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%)
+    }
+
+    10% {
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%)
+    }
+
+    20% {
+        background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%)
+    }
+
+    30% {
+        background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%)
+    }
+
+    40% {
+        background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%)
+    }
+
+    50% {
+        background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)
+    }
+
+    60% {
+        background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%)
+    }
+
+    70% {
+        background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%)
+    }
+
+    80% {
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%)
+    }
+
+    90% {
+        background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%)
+    }
+
+    100% {
+        background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%)
+    }
+}

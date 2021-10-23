@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    outline: none;
+}
+
+:root {
+    /* --accentPrimary: #FCA814; */
+    --accentPrimary: #441e9e;
+    --backgroundPrimary: #f2f2f2;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backgroundPrimary);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wave__top {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+.main__container h1 {
+    font-size: 3.25rem;
+    font-family: 'Titan One', cursive;
+    letter-spacing: 0.25em;
+    color: var(--accentPrimary);
+}
+
+.main__container button {
+    z-index: 1;
+    font-family: 'Titan One', cursive;
+    position: relative;
+    font-size: inherit;
+    border-radius: 1em;
+    letter-spacing: 0.15em;
+    color: var(--accentPrimary);
+    padding: 0.75em 1.5em;
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+.main__container button::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.75em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: var(--accentPrimary);
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+}
+
+.main__container button:hover {
+    cursor: pointer;
+    color: #F2F2F2;
+}
+
+.main__container button:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+.wave__bottom {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
