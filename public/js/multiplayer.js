@@ -4,6 +4,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const resetButton = document.querySelector('.reset__button');
     const announcer = document.querySelector('.announcer');
 
+
+    let winner = document.querySelector("#winner");
+    let winnerName = document.querySelector("#winnerName");
+    let quit = document.querySelector("#quit");
+    // const resultBox = document.querySelector(".result-box");
+    // const wonText = resultBox.querySelector(".won-text");
+
+
     let board = ['', '', '', '', '', '', '', '', ''];
     let currentPlayer = 'X';
     let isGameActive = true;

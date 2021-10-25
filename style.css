@@ -93,3 +93,36 @@ body {
     right: 0;
     bottom: 0;
 }
+
+/* @media (max-width: 825px) and (max-height: 650px) { */
+
+@media (max-width: 825px) {
+
+    body {
+        position: relative;
+        padding: 2em;
+    }
+
+    .wave__top {
+        width: 250px;
+        height: 250px;
+    }
+
+    .main__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 3.5em;
+    }
+
+    .main__container h1 {
+        font-size: 2.5rem;
+    }
+
+    .wave__bottom {
+        width: 250px;
+        height: 250px;
+    }
+
+}
