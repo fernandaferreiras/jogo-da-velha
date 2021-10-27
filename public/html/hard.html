@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/multiplayer.css">
-    <!-- <script src="../js/teste.js" defer></script> -->
-    <script src="../js/multiplayer.js" defer></script>
+    <link rel="stylesheet" href="../css/hard.css">
+    <script src="../js/hard.js" defer></script>
     <link rel="shortcut icon" type="imagex/png" href="../img/tic-tac-toe-hand-drawn-game.ico">
-    <title>MULTIPLAYER</title>
+    <title>DIFÍCIL</title>
 </head>
 
 <body>
@@ -34,7 +33,7 @@
 
     <!-- ---------------------------------------------------------------------------------------- -->
 
-    <div class="multiplayer__container">
+    <div class="hard__container">
 
 
         <a class="back__icon" href="./level.html">
@@ -52,58 +51,41 @@
         </div>
 
         <div class="box__area">
-            <div class="box" id="0"></div>
-            <div class="box" id="1"></div>
-            <div class="box" id="2"></div>
-            <div class="box" id="3"></div>
-            <div class="box" id="4"></div>
-            <div class="box" id="5"></div>
-            <div class="box" id="6"></div>
-            <div class="box" id="7"></div>
-            <div class="box" id="8"></div>
+            <div class="square">
+                <div class="box" id="0"></div>
+                <div class="box" id="1"></div>
+                <div class="box" id="2"></div>
+            </div>
+            <div class="square">
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+            </div>
+            <div class="square">
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+            </div>
         </div>
 
-        <!-- <div class="box__area">
-            <div class="box" id="0"></div>
-            <div class="box" id="1"></div>
-            <div class="box" id="2"></div>
-            <div class="box" id="3"></div>
-            <div class="box" id="4"></div>
-            <div class="box" id="5"></div>
-            <div class="box" id="6"></div>
-            <div class="box" id="7"></div>
-            <div class="box" id="8"></div>
-        </div> -->
+        <!-- <div class="display announcer hide"></div> -->
 
-        <div class="display announcer hide"></div>
 
-        <!-- <div id="winner">
-            <h2 id="winnerName">Player X Win The Game!</h2>
-            <div id="button">
-                <button id="quit">Play Again</button>
+        <div class="modal-container">
+            <div class="modal choose-modal">
+                <h3>Choose Your Weapon</h3>
+                <div class="button-area"><span class="x-marker">X</span><span class="o-marker">O</span>
+                </div>
             </div>
-        </div> -->
-
-        <!-- <div id="winner">
-            <h2 id="winnerName">Player X Win The Game!</h2>
-            <div id="button">
-                <button id="quit">Play Again</button>
+            <div class="modal end-game-modal">
+                <h3></h3>
+                <p>Try harder next time!</p>
+                <div class="button-area"><span>Play Again</span>
+                </div>
             </div>
-        </div> -->
-        
-        <!-- <div id="myModal" class="modal animated fadeIn"></div>
+        </div>
 
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Game Over</h2>
-            </div>
-            <div class="modal-body">
-                <p class="modal_text"></p>
-                <button id="restartbutton">Play again?</button>
-            </div>
-        </div> -->
-
-        <button class="reset__button">
+        <!-- <button class="reset__button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g fill='#f2f2f2'>
                     <path
@@ -111,7 +93,7 @@
                     </path>
                 </g>
             </svg>
-        </button>
+        </button> -->
 
 
     </div>
@@ -135,8 +117,6 @@
                 fill="#5822d6"></path>
         </g>
     </svg>
-
-
 
 </body>
 
