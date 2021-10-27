@@ -69,7 +69,6 @@ body {
 }
 
 .back__icon:hover {
-
     -moz-transform: scale(1.5);
     -webkit-transform: scale(1.5);
     -o-transform: scale(1.5);
@@ -87,14 +86,12 @@ body {
 .playerX {
     color: #70c1b3;
     font-family: 'Titan One', cursive;
-
 }
 
 .playerO {
     font-family: 'Titan One', cursive;
     color: #f25f5c;
 }
-
 
 .hide {
     display: none;
@@ -107,7 +104,6 @@ body {
     grid-template-columns: auto auto auto;
     gap: 0.5em;
     z-index: 4;
-
 }
 
 .box {
@@ -119,7 +115,6 @@ body {
     place-items: center;
     cursor: pointer;
     transition: 0.3s;
-
 }
 
 .box:hover {
@@ -182,7 +177,6 @@ body {
     font-size: 17px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    ;
 }
 
 .modal-header {
@@ -202,12 +196,12 @@ body {
     padding: 10px;
     margin-top: 10px;
     color: white;
-    background-color: #EF798A;
+    background-color: #ef798a;
     cursor: pointer;
 }
 
 #restartbutton:hover {
-    background-color: #CC4C5E;
+    background-color: #cc4c5e;
 }
 
 /* ---------------------------------------------------------------------------------------- */
@@ -231,7 +225,6 @@ body {
 
 /* @media (max-width: 825px) and (max-height: 650px) { */
 @media (max-width: 825px) {
-
     body {
         padding: 4.5em;
     }
@@ -251,7 +244,6 @@ body {
         margin-left: 2.5em;
     }
 
-
     .multiplayer__container {
         display: flex;
         justify-content: center;
@@ -263,8 +255,6 @@ body {
         height: 5em;
         width: 5em;
     }
-
-
 
     .reset__button {
         margin-bottom: 2.5em;
