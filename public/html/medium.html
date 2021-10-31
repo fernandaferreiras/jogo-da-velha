@@ -2,125 +2,74 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/medium.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="../css/computerPlay.css" />
     <script src="../js/medium.js" defer></script>
-    <link rel="shortcut icon" type="imagex/png" href="../img/ticTacToe.ico">
     <title>MÉDIO</title>
 </head>
 
 <body>
 
-    <svg class="wave__top__left" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-        <g transform="translate(0, 0)">
-            <path
-                d="M378 0C324.8 31.9 271.5 63.7 254.1 105.2C236.6 146.8 254.8 198 243.2 243.2C231.6 288.5 190.2 327.8 144.7 349.2C99.1 370.7 49.6 374.3 0 378L0 0Z"
-                fill="#5822d6"></path>
-        </g>
-    </svg>
+    <img class="wave-top-left" src="../img/wave-top-left.svg">
 
-    <svg class="wave__top__right" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-        <g transform="translate(500, 0)">
-            <path
-                d="M0 189.3C-16.9 178.6 -33.7 167.9 -53.2 163.6C-72.6 159.3 -94.5 161.5 -111.3 153.1C-128 144.8 -139.7 126 -148.9 108.2C-158.1 90.3 -164.9 73.5 -171.2 55.6C-177.5 37.8 -183.4 18.9 -189.3 0L0 0Z"
-                fill="#5822d6"></path>
-        </g>
-    </svg>
+    <img class="wave-top-right" src="../img/wave-top-right.svg">
 
-    <!-- ---------------------------------------------------------------------------------------- -->
+    <a class="back-icon" href="./level.html"><img src="../img/back-icon.svg"></a>
 
-    <div class="medium__container">
+    <!-- select box -->
 
-
-        <a class="back__icon" href="./level.html">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <g fill='#f2f2f2'>
-                    <path
-                        d="M12.4 18.2c0-.4-.1-.7-.4-.9L7.4 13c-.5-.5-.5-1.4 0-1.9L12 6.8c.3-.2.4-.6.4-.9 0-1.1-1.3-1.7-2.1-.9l-6.8 6.2c-.6.5-.6 1.4 0 1.9l6.8 6.2c.8.5 2.1-.1 2.1-1.1zM20.4 18.2c0-.4-.1-.7-.4-.9L15.4 13c-.5-.5-.5-1.4 0-1.9L20 6.8c.3-.2.4-.6.4-.9 0-1.1-1.3-1.7-2.1-.9l-6.8 6.2c-.6.5-.6 1.4 0 1.9l6.8 6.2c.8.5 2.1-.1 2.1-1.1z">
-                    </path>
-                </g>
-            </svg>
-        </a>
-
-        <div class="display">
-            VEZ DO JOGADOR <span class="display-player playerX">X</span>
-        </div>
-
-        <div class="box__area">
-            <div class="square">
-                <div class="box" id="0"></div>
-                <div class="box" id="1"></div>
-                <div class="box" id="2"></div>
-            </div>
-            <div class="square">
-                <div class="box" id="3"></div>
-                <div class="box" id="4"></div>
-                <div class="box" id="5"></div>
-            </div>
-            <div class="square">
-                <div class="box" id="6"></div>
-                <div class="box" id="7"></div>
-                <div class="box" id="8"></div>
+    <div class="select-box">
+        <div class="content">
+            <div class="title">SELECIONE X OU O</div>
+            <div class="options">
+                <button class="playerX">JOGADOR X</button>
+                <button class="playerO">JOGADOR O</button>
             </div>
         </div>
-
-        <!-- <div class="display announcer hide"></div> -->
-
-        <div class="endgame">
-            <div class="text"></div>
-        </div>
-
-
-        <!-- <div class="modal-container">
-            <div class="modal choose-modal">
-                <h3>Choose Your Weapon</h3>
-                <div class="button-area"><span class="x-marker">X</span><span class="o-marker">O</span>
-                </div>
-            </div>
-            <div class="modal end-game-modal">
-                <h3></h3>
-                <p>Try harder next time!</p>
-                <div class="button-area"><span>Play Again</span>
-                </div>
-            </div>
-        </div> -->
-
-        <button onClick="startGame()" class="reset__button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <g fill='#f2f2f2'>
-                    <path
-                        d="M3 10V3l2.7 2.7C7.3 4 9.6 2.9 12.2 3c4.7.1 8.7 4 8.8 8.7.1 5.1-3.9 9.3-9 9.3-3.3 0-6.2-1.8-7.8-4.5-.4-.7.1-1.5.9-1.5.4 0 .7.2.9.5 1.3 2.1 3.6 3.6 6.3 3.5 3.7-.1 6.7-3.2 6.7-6.9.1-3.9-3.1-7.1-7-7.1-1.9 0-3.7.8-4.9 2.1L10 10H3z">
-                    </path>
-                </g>
-            </svg>
-        </button>
-
-
     </div>
 
-    <!-- ---------------------------------------------------------------------------------------- -->
+    <!-- playboard section -->
+    <div class="play-board">
+        <div class="details">
+            <div class="players">
+                <span class="Xturn">X</span>
+                <span class="Oturn">O</span>
+                <div class="slider"></div>
+            </div>
+        </div>
+        <div class="play-area">
+            <section>
+                <span class="box1"></span>
+                <span class="box2"></span>
+                <span class="box3"></span>
+            </section>
+            <section>
+                <span class="box4"></span>
+                <span class="box5"></span>
+                <span class="box6"></span>
+            </section>
+            <section>
+                <span class="box7"></span>
+                <span class="box8"></span>
+                <span class="box9"></span>
+            </section>
+        </div>
+    </div>
 
-    <svg class="wave__bottom__left" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-        <g transform="translate(0, 500)">
-            <path
-                d="M0 -189.3C14.6 -171.8 29.3 -154.4 49.1 -151.2C69 -148.1 94.1 -159.3 111.3 -153.1C128.4 -147 137.7 -123.5 142.4 -103.5C147 -83.4 147 -66.7 154.1 -50.1C161.1 -33.4 175.2 -16.7 189.3 0L0 0Z"
-                fill="#5822d6"></path>
-        </g>
-    </svg>
+    <!-- result box -->
+    <div class="result-box">
+        <div class="won-text"></div>
+        <div class="btn"><button>JOGAR DE NOVO</button></div>
+    </div>
 
-    <svg class="wave__bottom__right" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-        <g transform="translate(500, 500)">
-            <path
-                d="M-378 0C-321.1 -29.6 -264.2 -59.2 -249.4 -103.3C-234.7 -147.4 -262.2 -206 -251.7 -251.7C-241.3 -297.5 -192.9 -330.3 -144.7 -349.2C-96.4 -368.1 -48.2 -373.1 0 -378L0 0Z"
-                fill="#5822d6"></path>
-        </g>
-    </svg>
+    <button class="reset-button"><img src="../img/reset-icon.svg"></button>
+
+    <img class="wave-bottom-left" src="../img/wave-bottom-left.svg">
+
+    <img class="wave-bottom-right" src="../img/wave-bottom-right.svg">
 
 </body>
 

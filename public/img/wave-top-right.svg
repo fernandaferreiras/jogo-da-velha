@@ -1,0 +1,8 @@
+<svg class="wave_top_right" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <g transform="translate(500, 0)">
+        <path
+            d="M0 189.3C-16.9 178.6 -33.7 167.9 -53.2 163.6C-72.6 159.3 -94.5 161.5 -111.3 153.1C-128 144.8 -139.7 126 -148.9 108.2C-158.1 90.3 -164.9 73.5 -171.2 55.6C-177.5 37.8 -183.4 18.9 -189.3 0L0 0Z"
+            fill="#5822d6"></path>
+    </g>
+</svg>

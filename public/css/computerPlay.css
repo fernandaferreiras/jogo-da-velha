@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    outline: none;
+    font-family: 'Titan One', cursive;
+}
+
+:root {
+    --backgroundPrimary: #f2f2f2;
+    --backgroundSecondary: #441e9e;
+    --textPrimary: #f2f2f2;
+    --boxPrimary: #d7caf7;
+    --boxSecondary: #ae95ef;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backgroundPrimary);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.wave-top-left {
+    width: 20em;
+    height: 20em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.wave-top-right {
+    width: 22.5em;
+    height: 22.5em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.back-icon {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 2.5em;
+    margin-left: 2.5em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.back-icon:hover {
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.select-box,
+.play-board,
+.result-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.select-box {
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.15em;
+    background: var(--boxPrimary);
+    padding: 20px 25px 25px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.select-box.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.select-box .title {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.select-box .options {
+    display: flex;
+    width: 100%;
+}
+
+.options button {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0;
+    border: none;
+    background: var(--backgroundSecondary);
+    border-radius: 5px;
+    color: var(--textPrimary);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.options button:hover,
+.btn button:hover {
+    transform: scale(0.96);
+}
+
+.options button.playerX {
+    margin-right: 5px;
+}
+
+.options button.playerO {
+    margin-left: 5px;
+}
+
+.play-board {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.play-board.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.play-board .details {
+    padding: 7px;
+    border-radius: 10px;
+    background: var(--boxPrimary);
+}
+
+.play-board .players {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.players span {
+    position: relative;
+    z-index: 2;
+    color: var(--backgroundSecondary);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    cursor: default;
+    user-select: none;
+    transition: all 0.3 ease;
+}
+
+.players.active span:first-child {
+    color: var(--textPrimary);
+}
+
+.players.active span:last-child {
+    color: var(--backgroundSecondary);
+}
+
+.players span:first-child {
+    color: var(--textPrimary);
+}
+
+.players .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--backgroundSecondary);
+    border-radius: 7.5px;
+    transition: all 0.3s ease;
+}
+
+.players.active .slider {
+    left: 50%;
+}
+
+.players.active span:first-child {
+    color: var(--backgroundSecondary);
+}
+
+.players.active span:nth-child(2) {
+    color: var(--textPrimary);
+}
+
+.players.active .slider {
+    left: 50%;
+}
+
+.play-area {
+    margin-top: 20px;
+}
+
+.play-area section {
+    display: flex;
+    margin-bottom: 1px;
+}
+
+.play-area section span {
+    display: block;
+    height: 110px;
+    width: 110px;
+    margin: 3.5px;
+    cursor: pointer;
+    background-color: var(--boxPrimary);
+    color: var(--backgroundSecondary);
+
+
+    font-size: 3rem;
+    /* line-height: 80px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.play-area section span:hover {
+    background-color: var(--boxSecondary);
+}
+
+.result-box {
+    padding: 25px 20px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    background: var(--boxPrimary);
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.result-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.result-box .won-text {
+    font-size: 30px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.result-box .won-text p {
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+.result-box .btn {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn button {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border: none;
+    background: var(--backgroundSecondary);
+    border-radius: 5px;
+    color: var(--textPrimary);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-button {
+    width: 2.5em;
+    height: 2.5em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 3.5em;
+    margin-right: 3.5em;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.reset-button:hover {
+    -moz-transform: scale(1.5) rotate(-150deg);
+    -webkit-transform: scale(1.5) rotate(-150deg);
+    -o-transform: scale(1.5) rotate(-150deg);
+    -ms-transform: scale(1.5) rotate(-150deg);
+    transform: scale(1.5) rotate(-150deg);
+}
+
+.wave-bottom-left {
+    width: 22.5em;
+    height: 22.5em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.wave-bottom-right {
+    width: 20em;
+    height: 20em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
