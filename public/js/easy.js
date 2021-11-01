@@ -119,3 +119,17 @@ function selectWinner() { //if the one of following winning combination match th
 replayBtn.onclick = () => {
     window.location.reload(); //reload the current page on replay button click
 }
+
+
+
+// const reset = () => {
+//     document.querySelector('.box1').innerHTML = '';
+//     document.querySelector('.box2').innerHTML = '';
+//     document.querySelector('.box3').innerHTML = '';
+//     document.querySelector('.box4').innerHTML = '';
+//     document.querySelector('.box5').innerHTML = '';
+//     document.querySelector('.box6').innerHTML = '';
+//     document.querySelector('.box7').innerHTML = '';
+//     document.querySelector('.box8').innerHTML = '';
+//     document.querySelector('.box9').innerHTML = '';
+// };

@@ -81,3 +81,26 @@ body {
     right: 0;
     bottom: 0;
 }
+
+@media (max-width: 575px) {
+
+    .home-icon {
+        margin-top: 3.75em;
+    }
+
+    .btn-area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .level-container {
+        gap: 1em;
+    }
+
+    .level-container h1 {
+        letter-spacing: 0.20em;
+        font-size: 2.5rem;
+        color: var(--backgroundSecondary);
+    }
+
+}

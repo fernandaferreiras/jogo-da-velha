@@ -1,16 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
     const tiles = Array.from(document.querySelectorAll('.box'));
     const playerDisplay = document.querySelector('.display-player');
-    const resetButton = document.querySelector('.reset__button');
+    const resetButton = document.querySelector('.reset-button');
     const announcer = document.querySelector('.announcer');
-
-
-    let winner = document.querySelector("#winner");
-    let winnerName = document.querySelector("#winnerName");
-    let quit = document.querySelector("#quit");
-    // const resultBox = document.querySelector(".result-box");
-    // const wonText = resultBox.querySelector(".won-text");
-
 
     let board = ['', '', '', '', '', '', '', '', ''];
     let currentPlayer = 'X';
@@ -60,13 +52,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const announce = (type) => {
         switch (type) {
             case PLAYERO_WON:
-                announcer.innerHTML = 'Jogador <span class="playerO">O</span> venceu';
+                announcer.innerHTML = 'JOGADOR <span class="playerO">O</span> GANHOU';
                 break;
             case PLAYERX_WON:
-                announcer.innerHTML = 'Jogador <span class="playerX">X</span> venceu';
+                announcer.innerHTML = 'JOGADOR <span class="playerX">X</span> GANHOU';
                 break;
             case TIE:
-                announcer.innerText = 'Empatou';
+                announcer.innerText = 'EMPATOU';
         }
         announcer.classList.remove('hide');
     };

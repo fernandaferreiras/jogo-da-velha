@@ -238,6 +238,16 @@ body {
     border-radius: 10px;
 }
 
+/* .fa-circle {
+    color: red;
+    font-size: 2rem;
+}
+
+.fa-times {
+    color: royalblue;
+    font-size: 2rem;
+} */
+
 .play-area section span:hover {
     background-color: var(--boxSecondary);
 }
@@ -330,4 +340,54 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
+}
+
+@media (max-width: 575px) {
+
+    body {
+        padding: 2em;
+    }
+
+    .wave-top-left {
+        width: 12.5em;
+        height: 12.5em;
+    }
+
+    .wave-top-right {
+        width: 15em;
+        height: 15em;
+    }
+
+    .back-icon {
+        width: 2em;
+        height: 2em;
+        margin-top: 2.5em;
+        margin-left: 2em;
+    }
+
+    .select-box {
+        width: 90%;
+    }
+
+    .result-box {
+        width: 90%;
+    }
+
+
+    .reset-button {
+        width: 2.25em;
+        height: 2.25em;
+        margin-bottom: 3.75em;
+        margin-right: 2.75em;
+    }
+
+    .wave-bottom-left {
+        width: 15em;
+        height: 15em;
+    }
+
+    .wave-bottom-right {
+        width: 12.5em;
+        height: 12.5em;
+    }
 }
