@@ -102,6 +102,24 @@ body {
 
 }
 
+.ranking-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    margin-top: 2em;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.ranking-icon:hover {
+    -moz-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    transform: scale(1.25);
+}
+
 .playerX {
     color: #09C372;
 }
