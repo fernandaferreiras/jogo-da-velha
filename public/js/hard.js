@@ -1,3 +1,6 @@
+//I've tried to explain each JavaScript line with comments....Hope you'll understand
+
+//selecting all required elements
 const selectBox = document.querySelector(".select-box"),
     selectBtnX = selectBox.querySelector(".options .playerX"),
     selectBtnO = selectBox.querySelector(".options .playerO"),
@@ -7,19 +10,6 @@ const selectBox = document.querySelector(".select-box"),
     resultBox = document.querySelector(".result-box"),
     wonText = resultBox.querySelector(".won-text"),
     replayBtn = resultBox.querySelector("button");
-
-var origBoard;
-
-const winCombos = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [6, 4, 2]
-]
 
 window.onload = () => { //once window loaded
     for (let i = 0; i < allBox.length; i++) { //add onclick attribute in all available span
@@ -64,8 +54,6 @@ function clickedBox(element) {
     }, randomTimeDelay); //passing random delay value
 }
 
-
-
 // bot auto select function
 function bot() {
     let array = []; //creating empty array...we'll store unclicked boxes index
@@ -76,66 +64,8 @@ function bot() {
                 array.push(i); //inserting unclicked boxes number/index inside array
             }
         }
-
-        let randomBox = (newBoard, player) => {
-
-            var availSpots = emptySquares();
-
-            if (checkWin(newBoard, selectBtnO)) {
-                return {
-                    score: -10
-                };
-            } else if (checkWin(newBoard, selectBtnX)) {
-                return {
-                    score: 10
-                };
-            } else if (availSpots.length === 0) {
-                return {
-                    score: 0
-                };
-            }
-            var moves = [];
-            for (var i = 0; i < availSpots.length; i++) {
-                var move = {};
-                move.index = newBoard[availSpots[i]];
-                newBoard[availSpots[i]] = player;
-
-                if (player == selectBtnX) {
-                    var result = minimax(newBoard, selectBtnO);
-                    move.score = result.score;
-                } else {
-                    var result = minimax(newBoard, selectBtnX);
-                    move.score = result.score;
-                }
-
-                newBoard[availSpots[i]] = move.index;
-
-                moves.push(move);
-            }
-
-            var bestMove;
-            if (player === selectBtnX) {
-                var bestScore = -10000;
-                for (var i = 0; i < moves.length; i++) {
-                    if (moves[i].score > bestScore) {
-                        bestScore = moves[i].score;
-                        bestMove = i;
-                    }
-                }
-            } else {
-                var bestScore = 10000;
-                for (var i = 0; i < moves.length; i++) {
-                    if (moves[i].score < bestScore) {
-                        bestScore = moves[i].score;
-                        bestMove = i;
-                    }
-                }
-            }
-
-            return moves[bestMove];
-
-        }
-
+        let randomBox = array[Math.floor(Math.random() * array.length)]; //getting random index from array so bot will select random unselected box
+        
         if (array.length > 0) { //if array length is greater than 0
             if (players.classList.contains("player")) {
                 playerSign = "X"; //if player has chosen O then bot will X
@@ -191,27 +121,16 @@ replayBtn.onclick = () => {
     window.location.reload(); //reload the current page on replay button click
 }
 
-function bestSpot() {
-    return minimax(origBoard, playerSign).index;
-}
 
 
-function checkWin(board, player) {
-    let plays = board.reduce((a, e, i) =>
-        (e === player) ? a.concat(i) : a, []);
-    let gameWon = null;
-    for (let [index, win] of winCombos.entries()) {
-        if (win.every(elem => plays.indexOf(elem) > -1)) {
-            gameWon = {
-                index: index,
-                player: player
-            };
-            break;
-        }
-    }
-    return gameWon;
-}
-
-function emptySquares() {
-    return origBoard.filter(s => typeof s == 'number');
-}
+// const reset = () => {
+//     document.querySelector('.box1').innerHTML = '';
+//     document.querySelector('.box2').innerHTML = '';
+//     document.querySelector('.box3').innerHTML = '';
+//     document.querySelector('.box4').innerHTML = '';
+//     document.querySelector('.box5').innerHTML = '';
+//     document.querySelector('.box6').innerHTML = '';
+//     document.querySelector('.box7').innerHTML = '';
+//     document.querySelector('.box8').innerHTML = '';
+//     document.querySelector('.box9').innerHTML = '';
+// };
