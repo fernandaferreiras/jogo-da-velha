@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+body {
+    position: relative;
+    outline: none;
+    user-select: none;
+}
+
+.click {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 2em;
+    cursor: pointer;
+    border: none;
+    transition: 0.25s;
+}
+
+.click:hover {
+    -moz-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    transform: scale(1.25);
+}
+
+/* .click:active {
+    background: #1b000f;
+} */
+
+/* .info-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    margin-top: 2em;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.info-icon:hover {
+    -moz-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    transform: scale(1.25);
+} */
+
+.message {
+    position: absolute;
+    top: calc(50% - 140px);
+    left: calc(50% - 300px);
+    width: 600px;
+    height: 300px;
+    z-index: 1000;
+    line-height: 1.5em;
+    background: #fff;
+    color: button;
+    padding: 60px;
+    color: #441e9e;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 6px;
+    -webkit-transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+}
+
+.message.active {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.okay {
+    display: block;
+    height: 40px;
+    width: 300px;
+    margin: 40px auto 0;
+    background: #441e9e ;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.25s;
+    letter-spacing: 0.25em;
+}
+
+.okay:focus {
+    outline: none;
+}
+
+.okay:hover {
+    cursor: pointer;
+    background-color: #4b24a7;
+}
+
+/* .okay:active {
+    background: #ca4c22;
+} */
