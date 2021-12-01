@@ -65,7 +65,6 @@ function bot() {
             }
         }
         let randomBox = array[Math.floor(Math.random() * array.length)]; //getting random index from array so bot will select random unselected box
-        
         if (array.length > 0) { //if array length is greater than 0
             if (players.classList.contains("player")) {
                 playerSign = "X"; //if player has chosen O then bot will X
@@ -120,17 +119,3 @@ function selectWinner() { //if the one of following winning combination match th
 replayBtn.onclick = () => {
     window.location.reload(); //reload the current page on replay button click
 }
-
-
-
-// const reset = () => {
-//     document.querySelector('.box1').innerHTML = '';
-//     document.querySelector('.box2').innerHTML = '';
-//     document.querySelector('.box3').innerHTML = '';
-//     document.querySelector('.box4').innerHTML = '';
-//     document.querySelector('.box5').innerHTML = '';
-//     document.querySelector('.box6').innerHTML = '';
-//     document.querySelector('.box7').innerHTML = '';
-//     document.querySelector('.box8').innerHTML = '';
-//     document.querySelector('.box9').innerHTML = '';
-// };
